@@ -40,6 +40,15 @@ header {
   right: 8px;
 }
 
+.lego-brick.pink {
+  background: #ff69b4;
+  box-shadow: 0 4px 0 #c2185b, 0 8px 16px rgba(255, 105, 180, 0.3);
+}
+.lego-brick.pink::before, .lego-brick.pink::after {
+  background: #ff69b4;
+  box-shadow: 0 2px 0 #c2185b;
+}
+
 h1 {
   font-family: 'Montserrat', 'Quicksand', Arial, sans-serif;
   font-size: 2.8rem;
