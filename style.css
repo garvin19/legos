@@ -1,0 +1,148 @@
+body {
+  background: linear-gradient(135deg, #fffbe6 0%, #ffe066 100%);
+  font-family: 'Quicksand', Arial, sans-serif;
+  color: #222;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  text-align: center;
+  padding: 2rem 1rem 1rem 1rem;
+  background: #fffde7;
+  box-shadow: 0 2px 8px rgba(255, 224, 102, 0.15);
+}
+
+.lego-brick {
+  display: inline-block;
+  margin-bottom: 1rem;
+  width: 80px;
+  height: 40px;
+  background: #ffd600;
+  border-radius: 8px 8px 6px 6px;
+  box-shadow: 0 4px 0 #e6b800, 0 8px 16px rgba(255, 214, 0, 0.3);
+  position: relative;
+}
+.lego-brick::before, .lego-brick::after {
+  content: '';
+  position: absolute;
+  top: -16px;
+  width: 20px;
+  height: 20px;
+  background: #ffd600;
+  border-radius: 50%;
+  box-shadow: 0 2px 0 #e6b800;
+}
+.lego-brick::before {
+  left: 8px;
+}
+.lego-brick::after {
+  right: 8px;
+}
+
+h1 {
+  font-family: 'Montserrat', 'Quicksand', Arial, sans-serif;
+  font-size: 2.8rem;
+  color: #ffb300;
+  margin: 0.2em 0 0.1em 0;
+  letter-spacing: 2px;
+  text-shadow: 1px 2px 0 #fffde7, 0 4px 12px #ffe066;
+}
+
+.subtitle {
+  font-size: 1.2rem;
+  color: #bfa600;
+  margin-bottom: 0.5em;
+}
+
+main {
+  max-width: 700px;
+  margin: 2rem auto;
+  background: #fffde7;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(255, 224, 102, 0.18);
+  padding: 2rem 2rem 1.5rem 2rem;
+}
+
+h2 {
+  color: #ffd600;
+  font-family: 'Montserrat', 'Quicksand', Arial, sans-serif;
+  margin-top: 0;
+}
+
+.origin, .structure {
+  margin-bottom: 2rem;
+}
+
+.brick-diagram {
+  margin: 2rem auto 1rem auto;
+  width: 120px;
+  height: 60px;
+  position: relative;
+}
+.stud-row {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: 10px;
+  right: 10px;
+}
+.stud-row:first-child {
+  top: 0;
+}
+.stud-row:last-child {
+  top: 22px;
+}
+.stud {
+  width: 22px;
+  height: 22px;
+  background: #ffd600;
+  border-radius: 50%;
+  box-shadow: 0 2px 0 #e6b800, 0 4px 8px #ffe066;
+  border: 2px solid #fffde7;
+}
+.brick-body {
+  position: absolute;
+  top: 16px;
+  left: 0;
+  width: 100%;
+  height: 38px;
+  background: #ffd600;
+  border-radius: 8px 8px 6px 6px;
+  box-shadow: 0 4px 0 #e6b800, 0 8px 16px rgba(255, 214, 0, 0.3);
+  border: 2px solid #fffde7;
+  z-index: 0;
+}
+
+footer {
+  text-align: center;
+  padding: 1.2rem 0 1.5rem 0;
+  color: #bfa600;
+  font-size: 1rem;
+  background: transparent;
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 1rem 0.5rem;
+  }
+  .brick-diagram {
+    width: 90px;
+    height: 45px;
+  }
+  .stud {
+    width: 16px;
+    height: 16px;
+  }
+  .stud-row {
+    left: 5px;
+    right: 5px;
+  }
+  .stud-row:last-child {
+    top: 15px;
+  }
+  .brick-body {
+    top: 10px;
+    height: 28px;
+  }
+}
